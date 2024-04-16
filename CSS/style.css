@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+  }
+
+/* wrapper | header | main | img */
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header nav ul {
+	display: flex;
+	justify-content: right;
+	list-style: none;
+	justify-content: start;
+	padding: 0;
+}
+
+nav ul li a:link {
+	padding: 10px;
+	text-decoration: none;
+	color: black;
+	font-size: 20pt;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background-color: #fff;
+	color: #222;
+	line-height: 1.4;
+	margin: 0;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+#logo {
+	width: 170px;
+}
+
+
+/* products | gallery-header( this is just to add extra padding because a wrapper) | gallery .... connetcted to div but seperate .... list-items | list-item-titles | price-tag */
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 8px;
+	grid-template-areas: 
+	"img1 img1 img1 img1 img1 img1"
+	"img2 img2 img3 img3 img4 img4"
+	;
+}
+/* in media queries we are just going to target grid-template-areas and just do each 3/3/3/3 division ex (img2 img2 img2) */
+.gallery img:nth-child(1){
+	grid-area: img1;
+}
+
+.gallery img:nth-child(2) {
+	grid-area: img2;
+}
+
+.gallery img:nth-child(3) {
+	grid-area: img3;
+}
+
+.gallery img:nth-child(4) {
+	grid-area: img4;
+}
+
+
+h1 {
+	font-size: 2.027rem;
+	font-weight: 600;
+}
+
+/* products are h3(ride or die) etc and limited edition is just a paragraph*/
+
+.list-item-title {
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+.margin-remove {
+	margin-top: 0;
+}
+
+button {
+	background-color: #000;
+	color: #fff;
+	padding: 10px 25px;
+	border: none;
+	border-radius: 4px;
+	font-weight: 700;
+}
+
+article {
+	padding-bottom: 25px;
+}
+
+
+/* Services | services grid | Quotes | quotes grid | Block quote */
+
+#services {
+	background-color: #f8fafc;
+	padding-bottom: 25px;
+}
+
+h2 {
+	padding-top: 45px;
+	text-align: center;
+	font-size: 1.802rem;
+	font-weight: 700;
+}
+
+#quotes {
+	background-color: #000;
+	color: #fff;
+}
+
+.quotes-grid {
+	text-align: left;
+	padding-bottom: 45px;
+	display: grid;
+	gap: 40px;
+}
+
+blockquote {
+	margin: 0;
+}
+
+/* sales grid | article */
+.sales-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 1em;
+	text-align: center;
+}
+
+h3 {
+	font-size: 1.266rem;
+	font-weight: 700;
+}
+
+/* footer */
+footer {
+	font-size: large;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    padding: 15px;
+	margin-top: auto;
+}
+
+/* media query section */
+
+@media (min-width: 768px) {
+	/* body {
+		background-color: blue;
+	} */
+
+	.gallery {
+		display: grid;
+		grid-template-areas: 
+	"img1 img1 img1 img2 img2 img2"
+	"img3 img3 img3 img4 img4 img4"
+	;
+	}
+
+	.services-grid {
+		display: flex;
+		flex-direction: row;
+		gap: 25px;
+	}
+
+	.quotes-grid {
+		display: flex;
+		flex-direction: row;
+		gap: 65px;
+	}
+
+	.sales-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+	}
+
+}
+
+@media (min-width: 960px) {
+	/* body {
+		background-color: pink;
+	} */
+
+	.gallery-header {
+		display: flex;
+		justify-content: space-between;
+		gap: 2em;
+	}
+
+}
+
